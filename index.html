@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #c49a6c;
+            display: inline-block;
+        }
+        .details {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .rsvp {
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="dragi">Dragi</h1><h1>&nbsp;</h1><h1 id="couple-names">[insert_couple_names]</h1>
+        <br>
+        <p class="details"><strong>Osnovne informacije</strong></p>
+        <p class="details">Vabiva <span id="te">te</span>, da se nama <span id="pridruzis">pridružiš</span> na najinem poročnem obredu in z nama <span id="proslavis">proslaviš</span> pozno v noč.</p>
+        <p class="details">&#128197; <strong>14. 6. 2025</strong><span> (</span><a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Poroka&dates=20250614T150000Z/20250615T030000Z&details=Join%20us%20for%20our%20special%20day!&location=Grič pri Klevevžu 1, 8220 Šmarješke Toplice" target="_blank">shrani v Google koledar</a><span>)</span></p>
+        <p class="details">&#128340; <strong>17:00</strong></p>
+        <p class="details">&#x1F4CD; <strong>Grič pri Klevevžu </strong><span> (</span><a href="https://maps.app.goo.gl/f5zNZ2j4SKGEDLRz6" target="_blank">Google maps</a><span>)</span></p>
+        <p class="details"><strong>Opombe</strong></p>
+        <p class="details">V primeru lepega vremena bodo obred, večerja in prvi del zabave potekali zunaj na travi in makadamu. Po 23. uri se zabava prestavi v dvorano. Priporočava primerno obutev in oblačila. Po večerji bo na lokaciji organiziran prevoz, ki bo goste brezplačno vozil do prenočišč.</p>
+        <p class="details">Prosiva, da svojo prisotnost <span id="potrdis">potrdiš</span> do 31.5. na spodnji povezavi. Na isti povezavi nama prav tako <span id="sporoci">sporoči</span> svoje želje glede menija ter kakršnakoli vprašanja.</p>
+        <p class="details">Veseliva se, da bova dan preživela v <span id="tvoji">tvoji</span> družbi!</p>
+        <h2 id="dragi">Dušan in Nika</h2>
+        <p class="details"><strong>TODO: google form, kjer vkljuci RSVP, preference za meni, prostor za komentar, število otrok.</strong></p>
+        
+    </div>
+    
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param) ? decodeURIComponent(urlParams.get(param)) : null;
+        }
+
+        const coupleNames = getQueryParam("name");
+        if (coupleNames) {
+            document.getElementById("couple-names").textContent = coupleNames;
+        }
+        
+        const gc = getQueryParam("gc");
+        if (gc=="1") {
+            document.getElementById("dragi").textContent = "Draga";
+            document.getElementById("te").textContent = "te";
+            document.getElementById("pridruzis").textContent = "pridružiš";
+            document.getElementById("proslavis").textContent = "proslaviš";
+            document.getElementById("potrdis").textContent = "potrdiš";
+            document.getElementById("sporoci").textContent = "sporoči";
+            document.getElementById("tvoji").textContent = "tvoji";
+        } else if (gc=="2") {
+            document.getElementById("dragi").textContent = "Draga";
+            document.getElementById("te").textContent = "vaju";
+            document.getElementById("pridruzis").textContent = "pridružita";
+            document.getElementById("proslavis").textContent = "proslavita";
+            document.getElementById("potrdis").textContent = "potrdita";
+            document.getElementById("sporoci").textContent = "sporočita";
+            document.getElementById("tvoji").textContent = "vajini";
+        }
+        //moški: DragI, TE, pridružiŠ, proslaviŠ, potrdiŠ, želel, sporočiŠ, TVOJI
+        //Ženska: DragA, TE, pridružiŠ, proslaviŠ, potrdiŠ, želelA, sporočiŠ, TVOJI
+        //Par: DragA, VAJU, pridružiTA, potrdiTA, želelA, sporočiTA, VAJINI
+
+        //Vabiva te, da se nama pridružiš na najinem poročnem obredu in z nama proslaviš pozno v noč 
+    </script>
+</body>
+</html>
