@@ -125,7 +125,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 id="couple-names">[insert_couple_names]</h1>
+        <h1 id="couple-names">Cari amici</h1>
         <br>
         
         <p class="details_text">Vi invitiamo a unirvi a noi per la nostra cerimonia di nozze e a festeggiare con noi fino a tarda notte.</p>
@@ -155,12 +155,8 @@
 
         const coupleNames = getQueryParam("name");
         if (coupleNames) {
-            document.getElementById("couple-names").textContent = coupleNames;
-        }
-        
-        } if (gc=="2") {
             document.getElementById("couple-names").innerHTML = "Cari<br>" + coupleNames;
-        }
+        }        
 
     </script>
     
