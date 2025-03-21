@@ -2,33 +2,58 @@
 <html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invito a nozze</title>
+    <title>Poročno vabilo</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400&display=swap');
         body {
             /*font-family: 'Arial', sans-serif;*/
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            color: #4E4D46;
+            /*font-family: 'Cormorant Garamond', serif;*/
+            background: url('background.jpg') no-repeat top center fixed;
+            background-size: cover;
             text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #faebd7;/*#f8f8f8;*/
-            color: #333;
+            background-color: #FFFAF7;
+            /*#f8f8f8;*/
+            /*color: #333;*/
         }
         .container {
-            max-width: 600px;
-            margin: 20px auto;
+            max-width: 550px;
+            margin: 30px auto;
             padding: 20px;
-            background: #faebd7;
+            /*background: rgba(245, 242, 223, 0.9); 
+            border-radius: 10px;*/
+            /*background: #faebd7;*/
             /*border-radius: 10px;*/
             /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
         }
         h1 {
             /*color: #c49a6c;*/
+            font-family: 'Abril Fatface', cursive;
+            font-size: 42px;
+            color: #91843F;
+            display: inline-block;
+        }
+        h2 {
+            /*color: #c49a6c;*/
+            font-family: 'Abril Fatface', cursive;
+            font-size: 30px;
+            color: #91843F;
             display: inline-block;
         }
         .details {
-            font-size: 18px;
+            /*font-size: 18px;*/
+            margin-top: 20px;
+        }
+        .details_text {
+            /*font-size: 18px;*/
+            /*max-width: 500px;*/
             margin-top: 20px;
         }
         .rsvp {
@@ -41,27 +66,87 @@
             font-size: 14px;
             color: #777;
         }
+
+        a {
+            color: black; /* Sets the text color to black */
+            text-decoration: underline; /* Keeps the underline */
+        }
+
+        /* Optional: Remove the color change on hover, if you want */
+        a:hover {
+            color: black; /* Keeps the text color black on hover */
+        }
+
+        .questionnaire-box {
+            background-color: #A5D1D0; /* Sky-blue background */
+            padding: 15px 35px; /* Adjust padding as needed */
+            text-align: center; /* Center the text */
+            border-radius: 5px; /* Rounded corners */
+            display: inline-block; /* Make it inline-block for proper sizing */
+            margin: 20px auto; /* Center the box */
+        }
+
+        .questionnaire-box a {
+            color: white; /* Black text color */
+            text-decoration: none; /* Remove underline */
+            font-weight: bold; /* Bold text */
+            font-size: 20px; /* Adjust font size as needed */
+        }
+
+        .questionnaire-box a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+        /* Mobile-specific styles */
+        @media (max-width: 600px) {
+            body {
+                /* Change background settings for mobile */
+                background-position: top center;
+                background-size: 120% auto;
+                background-color: #FFFAF7;
+            }
+            .container{
+                margin: 10px auto; /* example change of margin */
+                padding: 10px; /* example change of padding */
+            }
+            h1{
+                font-size: 30px; /* example change of font size */
+                
+            }
+            .details {
+                font-size: 16px; /* example change of font size */
+            }
+            .details_text{
+                font-size: 16px; /* example change of font size */
+            }
+        }
+        
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Cara</h1><h1>&nbsp;</h1><h1 id="couple-names">[insert_couple_names]</h1>
+        <h1 id="couple-names">[insert_couple_names]</h1>
         <br>
-        <p class="details"><strong>Informazioni principali</strong></p>
-        <p class="details">Vi invitiamo a unirvi a noi per la nostra cerimonia di nozze e a festeggiare con noi fino a tarda notte.</p>
-        <p class="details">&#128197; <strong>14. 6. 2025</strong><span> (</span><a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Poroka&dates=20250614T150000Z/20250615T030000Z&details=Join%20us%20for%20our%20special%20day!&location=Grič pri Klevevžu 1, 8220 Šmarješke Toplice" target="_blank">salva su Google Calendar</a><span>)</span></p> 
-        <p class="details">&#x1F4CD; <strong>Grič pri Klevevžu </strong><span> (</span><a href="https://maps.app.goo.gl/f5zNZ2j4SKGEDLRz6" target="_blank">Google maps</a><span>)</span></p>
-        <p class="details">&#128340; <strong>17:00 (cerimonia alle 17:30)</strong></p>
+        
+        <p class="details_text">Vi invitiamo a unirvi a noi per la nostra cerimonia di nozze e a festeggiare con noi fino a tarda notte.</p>
+        <p class="details">&#128197; 14. 6. 2025<span> (</span><a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Poroka&dates=20250614T150000Z/20250615T030000Z&details=Join%20us%20for%20our%20special%20day!&location=Grič pri Klevevžu 1, 8220 Šmarješke Toplice" target="_blank">salva su Google Calendar</a><span>)</span></p> 
+        <p class="details">&#x1F4CD; Grič pri Klevevžu<span> (</span><a href="https://maps.app.goo.gl/f5zNZ2j4SKGEDLRz6" target="_blank">Google maps</a><span>)</span></p>
+        <p class="details">&#128340; 17:00 (cerimonia alle 17:30)</p>
         <p class="details"><img src="11.png" alt="1" style="display: block; margin: 0 auto; width: 70%;"></p>
-        <p class="details"><strong>Note</strong></p>
-        <p class="details">In caso di bel tempo, la cerimonia, la cena e la prima parte della festa si svolgeranno all'aperto, su prato e ghiaia. Dopo le 23:00, la festa si sposterà nella sala interna. Vi consigliamo di indossare scarpe e abiti adatti.</p>
-        <p class="details">Vi preghiamo di confermare la vostra presenza entro il 31 maggio tramite il link sottostante. Nello stesso link potrete comunicarci le vostre preferenze per il menù e qualsiasi altra domanda.</p>
-        <p class="details">Link al questionario: <a href="https://docs.google.com/forms/d/e/1FAIpQLScJH2-4QIn4thMxvLr_qRxNNuUFHL3jIMkjbjw26yCcR6Z9ug/viewform?usp=sharing" target="_blank">docs.google.com/1FAIpQLSc</a></p>
-        <p class="details">Non vediamo l'ora di trascorrere questa giornata speciale con voi!</p>
+        <p class="details_text">In caso di bel tempo, la cerimonia, la cena e la prima parte della festa si svolgeranno all'aperto, su prato e ghiaia. Dopo le 23:00, la festa si sposterà nella sala interna. Vi consigliamo di indossare scarpe e abiti adatti.</p>
+        <p class="details_text">Vi preghiamo di confermare la vostra presenza entro il 31 maggio tramite il link sottostante. Nello stesso link potrete comunicarci le vostre preferenze per il menù e qualsiasi altra domanda.</p>
+        
+        <div class="questionnaire-box">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScJH2-4QIn4thMxvLr_qRxNNuUFHL3jIMkjbjw26yCcR6Z9ug/viewform?usp=sharing" target="_blank">
+                Questionario
+            </a>
+        </div>
+        
+        <p class="details_text">Non vediamo l'ora di trascorrere questa giornata speciale con voi!</p>
         <h2>Dušan e Nika</h2>
         <p class="details"><img src="21.png" alt="2" style="display: block; margin: 0 auto; width: 85%;"></p>
     </div>
-    
+
     <script>
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
@@ -73,24 +158,11 @@
             document.getElementById("couple-names").textContent = coupleNames;
         }
         
-        const gc = getQueryParam("gc");
-        if (gc=="1") {
-            document.getElementById("dragi").textContent = "Draga";
-            document.getElementById("te").textContent = "te";
-            document.getElementById("pridruzis").textContent = "pridružiš";
-            document.getElementById("proslavis").textContent = "proslaviš";
-            document.getElementById("potrdis").textContent = "potrdiš";
-            document.getElementById("sporoci").textContent = "sporoči";
-            document.getElementById("tvoji").textContent = "tvoji";
-        } else if (gc=="2") {
-            document.getElementById("dragi").textContent = "Draga";
-            document.getElementById("te").textContent = "vaju";
-            document.getElementById("pridruzis").textContent = "pridružita";
-            document.getElementById("proslavis").textContent = "proslavita";
-            document.getElementById("potrdis").textContent = "potrdita";
-            document.getElementById("sporoci").textContent = "sporočita";
-            document.getElementById("tvoji").textContent = "vajini";
+        } if (gc=="2") {
+            document.getElementById("couple-names").innerHTML = "Cari<br>" + coupleNames;
         }
+
     </script>
+    
 </body>
 </html>
